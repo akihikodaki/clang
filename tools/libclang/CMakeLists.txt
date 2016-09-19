@@ -52,7 +52,7 @@ if (TARGET clangTidyPlugin)
   list(APPEND LIBS clangTidyPlugin)
 endif ()
 
-find_library(DL_LIBRARY_PATH dl)
+find_library(DL_LIBRARY_PATH dl NO_CMAKE_SYSTEM_PATH)
 if (DL_LIBRARY_PATH)
   list(APPEND LIBS dl)
 endif()
