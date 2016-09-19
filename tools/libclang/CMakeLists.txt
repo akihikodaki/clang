@@ -51,7 +51,7 @@ if (CLANG_ENABLE_ARCMT)
   list(APPEND LIBS clangARCMigrate)
 endif ()
 
-find_library(DL_LIBRARY_PATH dl)
+find_library(DL_LIBRARY_PATH dl NO_CMAKE_SYSTEM_PATH)
 if (DL_LIBRARY_PATH)
   list(APPEND LIBS dl)
 endif()
